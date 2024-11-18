@@ -1,0 +1,131 @@
+.root{
+    -fx-background-color: #263238;
+    -fx-font-family: "Arial";
+    -fx-font-size: 12px;
+    -fx-text-fill: white;
+
+}
+
+.button{
+    -fx-background-color: black;
+    -fx-text-fill: white;
+    -fx-border-radius: 0px;
+    -fx-border-color: #EEE;
+    -fx-border-width: 0.1px;
+}
+
+.button:focused {
+        -fx-border-width: 0.5px;
+        -fx-effect: dropshadow(gaussian, rgba(255, 255, 255, 0.5), 10, 0.5, 0, 0);
+        -fx-background-insets: 0, 1;
+}
+
+.label{
+    -fx-text-fill: white;
+}
+.text-field{
+    -fx-background-color: #212121;
+    -fx-text-fill: white;
+    -fx-border-radius: 0px;
+    -fx-border-color: #EEE;
+    -fx-border-width: 0.1px;
+}
+
+.text-field:focused {
+    -fx-border-width: 0.5px;
+    -fx-effect: dropshadow(gaussian, rgba(255, 255, 255, 0.5), 10, 0.5, 0, 0);
+    -fx-background-insets: 0, 1;
+}
+
+.choice-box{
+    -fx-background-color: #212121;
+    -fx-text-fill: white;
+}
+
+.choice-box .label {
+    -fx-text-fill: white;
+}
+.choice-box .context-menu {
+    -fx-background-color: black;
+    -fx-text-fill: white;
+}
+
+.choice-box .menu-item {
+    -fx-background-color: black;
+    -fx-text-fill: white;
+}
+
+.choice-box .menu-item:hover {
+    -fx-background-color: white;
+    -fx-text-fill: black;
+}
+
+.choice-box .menu-item:hover .label {
+    -fx-text-fill: black;
+}
+
+.table-view {
+    -fx-control-inner-background: #263238;
+    -fx-control-inner-background-alt: #37474F;
+    -fx-table-cell-border-color: white;
+    -fx-table-cell-border-width: 0.5px;
+    -fx-font-size: 12px;
+}
+
+.table-view .column-header {
+    -fx-background-color: black;
+    -fx-border-color: white;
+    -fx-border-width: 2px;
+    -fx-border-color: white;
+    -fx-border-width: 1px;
+}
+
+.table-view .cell {
+    -fx-text-fill: white;
+    -fx-alignment: CENTER_LEFT;
+    -fx-font-size: 12px;
+}
+
+.table-view .table-row-cell:selected {
+    -fx-background-color: black;
+    -fx-text-fill: white;
+}
+
+.scroll-bar {
+    -fx-background-color: #263238;
+    -fx-border-color: white;
+    -fx-border-width: 0.5px;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: black;
+}
+
+.split-pane .split-pane-divider {
+    -fx-background-color: black;
+}
+
+.split-pane:horizontal .split-pane-divider {
+    -fx-pref-height: 2px;
+}
+
+.chart-title {
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.chart-legend {
+    -fx-background-color: #212121;
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+}
+
+.chart-pie-label {
+    -fx-fill: white;
+}
+
+
+
+
+
