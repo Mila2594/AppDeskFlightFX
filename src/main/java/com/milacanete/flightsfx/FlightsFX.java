@@ -8,7 +8,7 @@ import java.util.Objects;
 
 /**
  * Clase principal de la aplicación FlightsFX para la gestión de vuelos.
- * Extiende {@link javafx.application.Application} y se encarga de inicializar y mostrar
+ * Extiende de {@link javafx.application.Application} y se encarga de inicializar y mostrar
  * la ventana principal de la aplicación utilizando JavaFX
  * donde los usuarios pueden ver y gestionar información sobre los vuelos.
  */
@@ -27,6 +27,8 @@ public class FlightsFX extends Application {
         Scene scene = new Scene(fxmlLoader.load());
         scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("/CSS/style.css")).toExternalForm());
         stage.setTitle("FlightsFX App");
+        stage.setMinWidth(615);
+        stage.setMinHeight(460);
         stage.setScene(scene);
         stage.show();
     }

@@ -34,9 +34,14 @@ import java.util.stream.Collectors;
 
 /**
  * Controlador principal para la vista de gestión de vuelos.
- * Proporciona la lógica para manejar eventos, aplicar filtros,
- * gestionando la adición, eliminación y actualización de vuelos en la tabla, así como la aplicación de filtros,
- * también la validación de entradas y la manipulación de los datos del vuelo.
+ * Maneja la lógica para gestionar los vuelos en la aplicación, incluyendo la visualización,
+ * adición, eliminación y actualización de vuelos en la tabla.
+ * Además, permite aplicar filtros, validar entradas y mostrar alertas de confirmación o errores.
+ *
+ * <p> La lista de vuelos se obtiene mediante la clase {@link FileUtils},
+ * que carga los datos desde un archivo y los mantiene como una lista observable. </p>
+ * <p> La clase también utiliza {@link MessageUtils} para mostrar alertas de validación,
+ * como la confirmación de acciones y la validación de caracteres prohibidos. </p>
  */
 public class FXMLMainViewController {
     /**

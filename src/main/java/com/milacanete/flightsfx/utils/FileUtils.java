@@ -18,20 +18,22 @@ import java.util.stream.Stream;
 
 /**
  * Clase encargada de gestionar la persistencia de la información de vuelos,
- * incluyendo la lectura y escritura del fichero flights.txt.
- * Esta clase proporciona métodos para cargar y guardar vuelos desde y hacia un archivo.
+ * Esta clase proporciona métodos para leer y guardar vuelos desde y hacia el archivo "flights.txt".
+ *  * <p> Utiliza la clase {@link Flight} para representar los vuelos,
+ *  contienen información como el número de vuelo, destino, fecha y hora de salida y duración.
  */
+
 public class FileUtils {
 
     // Crea un logger para la clase
     private static final Logger logger = Logger.getLogger(FileUtils.class.getName());
 
     /**
-     * Obtiene la ruta absoluta del archivo flights.txt ubicado en el directorio `src`.
+     * Obtiene la ruta absoluta del archivo flights.txt ubicado en el directorio principal del proyecto.
      * @return la ruta del archivo flights.txt.
      */
     private static Path getFlightsFile() {
-        return Paths.get(System.getProperty("user.dir"),"src/flights.txt");
+        return Paths.get(System.getProperty("user.dir"),"flights.txt");
     }
 
     /**
@@ -101,7 +103,7 @@ public class FileUtils {
                             flight.getFlightNumber(),
                             flight.getDestination(),
                             flight.getDepartureTime().format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm")),
-                            flight.getDuration().format(DateTimeFormatter.ofPattern("H:mm")));
+                            flight.getDuration().format(DateTimeFormatter.ofPattern("H:mm"))); //formato es hh:mm, para el patrón se usa H
                     writer.println(formatter);
             });
 

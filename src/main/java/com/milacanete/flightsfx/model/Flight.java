@@ -10,7 +10,7 @@ import java.util.Objects;
  */
 public class Flight {
 
-    private String flightNumber;
+    private final String flightNumber;
     private String destination;
     private LocalDateTime departureTime;
     private LocalTime duration;
