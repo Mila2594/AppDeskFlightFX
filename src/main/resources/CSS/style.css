@@ -1,131 +1,142 @@
-.root{
-    -fx-background-color: #263238;
-    -fx-font-family: "Arial";
-    -fx-font-size: 12px;
-    -fx-text-fill: white;
-
+/* Estilo general para la raíz de la aplicación */
+.root {
+    -fx-background-color: #455A64; /* Fondo oscuro para la aplicación */
+    -fx-font-family: "Arial"; /* Fuente para todo el texto */
+    -fx-font-size: 12px; /* Tamaño de fuente */
+    -fx-text-fill: white; /* Color de texto blanco */
 }
 
-.button{
-    -fx-background-color: black;
-    -fx-text-fill: white;
-    -fx-border-radius: 0px;
-    -fx-border-color: #EEE;
-    -fx-border-width: 0.1px;
+/* Estilo para los botones */
+.button {
+    -fx-background-color: black; /* Fondo negro para los botones */
+    -fx-text-fill: white; /* Texto blanco en los botones */
+    -fx-border-radius: 0px; /* Sin bordes redondeados */
+    -fx-border-color: #EEE; /* Color del borde */
+    -fx-border-width: 0.1px; /* Ancho de borde muy delgado */
 }
 
+/* Estilo para los botones cuando están enfocados (seleccionados) */
 .button:focused {
-        -fx-border-width: 0.5px;
-        -fx-effect: dropshadow(gaussian, rgba(255, 255, 255, 0.5), 10, 0.5, 0, 0);
-        -fx-background-insets: 0, 1;
+    -fx-border-width: 0.5px; /* Ancho de borde aumentado */
+    -fx-effect: dropshadow(gaussian, rgba(255, 255, 255, 0.5), 10, 0.5, 0, 0); /* Efecto de sombra */
+    -fx-background-insets: 0, 1; /* Inserción del fondo */
 }
 
-.label{
-    -fx-text-fill: white;
-}
-.text-field{
-    -fx-background-color: #212121;
-    -fx-text-fill: white;
-    -fx-border-radius: 0px;
-    -fx-border-color: #EEE;
-    -fx-border-width: 0.1px;
+/* Estilo para las etiquetas */
+.label {
+    -fx-text-fill: white; /* Texto blanco */
 }
 
+/* Estilo para los campos de texto */
+.text-field {
+    -fx-background-color: #212121; /* Fondo oscuro para los campos de texto */
+    -fx-text-fill: white; /* Texto blanco */
+    -fx-border-radius: 0px; /* Sin bordes redondeados */
+    -fx-border-color: #EEE; /* Color del borde */
+    -fx-border-width: 0.1px; /* Ancho de borde delgado */
+}
+
+/* Estilo para los campos de texto cuando están enfocados */
 .text-field:focused {
-    -fx-border-width: 0.5px;
-    -fx-effect: dropshadow(gaussian, rgba(255, 255, 255, 0.5), 10, 0.5, 0, 0);
-    -fx-background-insets: 0, 1;
+    -fx-border-width: 0.5px; /* Borde más grueso */
+    -fx-effect: dropshadow(gaussian, rgba(255, 255, 255, 0.5), 10, 0.5, 0, 0); /* Sombra */
+    -fx-background-insets: 0, 1; /* Inserción del fondo */
 }
 
-.choice-box{
-    -fx-background-color: #212121;
-    -fx-text-fill: white;
+/* Estilo para los ChoiceBox (listas desplegables) */
+.choice-box {
+    -fx-background-color: #212121; /* Fondo oscuro */
+    -fx-text-fill: white; /* Texto blanco */
 }
 
+/* Estilo para las etiquetas dentro del ChoiceBox */
 .choice-box .label {
-    -fx-text-fill: white;
+    -fx-text-fill: white; /* Texto blanco */
 }
+
+/* Estilo para el menú contextual dentro del ChoiceBox */
 .choice-box .context-menu {
-    -fx-background-color: black;
-    -fx-text-fill: white;
+    -fx-background-color: black; /* Fondo negro */
+    -fx-text-fill: white; /* Texto blanco */
 }
 
+/* Estilo para los elementos del menú dentro del ChoiceBox */
 .choice-box .menu-item {
-    -fx-background-color: black;
-    -fx-text-fill: white;
+    -fx-background-color: black; /* Fondo negro */
+    -fx-text-fill: white; /* Texto blanco */
 }
 
+/* Estilo para los elementos del menú cuando están seleccionados */
 .choice-box .menu-item:hover {
-    -fx-background-color: white;
-    -fx-text-fill: black;
+    -fx-background-color: white; /* Fondo blanco cuando se pasa el cursor */
+    -fx-text-fill: black; /* Texto negro */
 }
 
-.choice-box .menu-item:hover .label {
-    -fx-text-fill: black;
-}
-
+/* Estilo para las celdas en una TableView */
 .table-view {
-    -fx-control-inner-background: #263238;
-    -fx-control-inner-background-alt: #37474F;
-    -fx-table-cell-border-color: white;
-    -fx-table-cell-border-width: 0.5px;
-    -fx-font-size: 12px;
+    -fx-control-inner-background: #263238; /* Fondo de la tabla */
+    -fx-control-inner-background-alt: #37474F; /* Fondo alternativo */
+    -fx-table-cell-border-color: white; /* Color de los bordes de las celdas */
+    -fx-table-cell-border-width: 0.5px; /* Ancho de borde de celdas */
+    -fx-font-size: 12px; /* Tamaño de la fuente */
 }
 
+/* Estilo para los encabezados de las columnas en la TableView */
 .table-view .column-header {
-    -fx-background-color: black;
-    -fx-border-color: white;
-    -fx-border-width: 2px;
-    -fx-border-color: white;
-    -fx-border-width: 1px;
+    -fx-background-color: black; /* Fondo negro */
+    -fx-border-color: white; /* Bordes blancos */
+    -fx-border-width: 2px; /* Ancho del borde */
 }
 
+/* Estilo para las celdas dentro de la TableView */
 .table-view .cell {
-    -fx-text-fill: white;
-    -fx-alignment: CENTER_LEFT;
-    -fx-font-size: 12px;
+    -fx-text-fill: white; /* Texto blanco */
+    -fx-alignment: CENTER_LEFT; /* Alineación del texto a la izquierda */
+    -fx-font-size: 12px; /* Tamaño de la fuente */
 }
 
+/* Estilo para las filas seleccionadas en la TableView */
 .table-view .table-row-cell:selected {
-    -fx-background-color: black;
-    -fx-text-fill: white;
+    -fx-background-color: black; /* Fondo negro cuando está seleccionada */
+    -fx-text-fill: white; /* Texto blanco */
 }
 
+/* Estilo para las barras de desplazamiento */
 .scroll-bar {
-    -fx-background-color: #263238;
-    -fx-border-color: white;
-    -fx-border-width: 0.5px;
+    -fx-background-color: #263238; /* Fondo oscuro */
+    -fx-border-color: white; /* Bordes blancos */
+    -fx-border-width: 0.5px; /* Ancho del borde */
 }
 
+/* Estilo para el pulgar de la barra de desplazamiento */
 .scroll-bar .thumb {
-    -fx-background-color: black;
+    -fx-background-color: black; /* Pulgar negro */
 }
 
+/* Estilo para los divisores de un SplitPane */
 .split-pane .split-pane-divider {
-    -fx-background-color: black;
+    -fx-background-color: black; /* Fondo negro */
 }
 
 .split-pane:horizontal .split-pane-divider {
-    -fx-pref-height: 2px;
+    -fx-pref-height: 2px; /* Altura preferida del divisor */
 }
 
+/* Estilo para los títulos de los gráficos */
 .chart-title {
-    -fx-text-fill: white;
-    -fx-font-size: 16px;
-    -fx-font-weight: bold;
+    -fx-text-fill: white; /* Texto blanco */
+    -fx-font-size: 16px; /* Tamaño de la fuente */
+    -fx-font-weight: bold; /* Texto en negrita */
 }
 
+/* Estilo para la leyenda del gráfico */
 .chart-legend {
-    -fx-background-color: #212121;
-    -fx-text-fill: white;
-    -fx-font-size: 12px;
+    -fx-background-color: #212121; /* Fondo oscuro */
+    -fx-text-fill: white; /* Texto blanco */
+    -fx-font-size: 12px; /* Tamaño de la fuente */
 }
 
+/* Estilo para las etiquetas en los gráficos de pastel */
 .chart-pie-label {
-    -fx-fill: white;
+    -fx-fill: white; /* Etiquetas en blanco */
 }
-
-
-
-
-

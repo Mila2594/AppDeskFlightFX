@@ -1,3 +1,7 @@
+/**
+ * Módulo principal de la aplicación FlightsFX que gestiona vuelos
+ * y su visualización utilizando JavaFX.
+ */
 module com.milacanete.flightsfx {
     requires javafx.controls;
     requires javafx.fxml;

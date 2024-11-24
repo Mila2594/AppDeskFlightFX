@@ -19,6 +19,7 @@ import java.util.stream.Stream;
 /**
  * Clase encargada de gestionar la persistencia de la información de vuelos,
  * incluyendo la lectura y escritura del fichero flights.txt.
+ * Esta clase proporciona métodos para cargar y guardar vuelos desde y hacia un archivo.
  */
 public class FileUtils {
 
@@ -47,6 +48,7 @@ public class FileUtils {
             return Collections.emptyList();
         }
 
+        //try con recurso, se lee el archivo y se convierte en un stream
         try(Stream<String> lines = Files.lines(filePath)){
             return lines
                     .map(line -> {
@@ -92,6 +94,7 @@ public class FileUtils {
     private static void saveFlights(List<Flight> flights) {
         Path filePath = getFlightsFile();
 
+        //try con recurso, se abre el archivo para escritura con un PrintWriter
         try (PrintWriter writer = new PrintWriter(Files.newBufferedWriter(filePath))) {
             flights.forEach(flight -> {
                     String formatter = String.format("%s;%s;%s;%s",

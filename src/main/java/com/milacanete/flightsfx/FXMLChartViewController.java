@@ -24,9 +24,16 @@ import java.util.stream.Collectors;
  * y permite la navegación de regreso a la vista principal.
  */
 public class FXMLChartViewController {
+
+    /**
+     * Gráfico de pastel que muestra los destinos de los vuelos.
+     */
     @FXML
     public PieChart idFlightsPieChart;
 
+    /**
+     * Botón que permite regresar a la vista principal.
+     */
     @FXML
     public Button idGoToBackButton;
 
@@ -71,8 +78,8 @@ public class FXMLChartViewController {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/milacanete/flightsfx/FXMLMainView.fxml"));
         Parent view1 = loader.load();
         Scene view1Scene = new Scene(view1);
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        view1Scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("/CSS/style.css")).toExternalForm());
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow(); // Obtiene la ventana actual, Node apunta al nodo que dispara el evento
+        view1Scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("/CSS/style.css")).toExternalForm()); // Establece la hoja de estilos para la nueva escena
         stage.hide();
         stage.setScene(view1Scene);
         stage.show();
