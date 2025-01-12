@@ -368,9 +368,8 @@ public class FXMLMainViewController {
             FileUtils.saveFlightsToFile(flightsObsList); //guardar vuelo en el fichero
             clearFields();  //limpiar campos
             idFlightNumberTextField.requestFocus();
-            logger.info("Vuelo guardado: " + newFlight); // registrar vuelo en el log
         } catch (Exception e) {
-            logger.log(Level.SEVERE, "Error al guardar vuelo", e);
+            //logger.log(Level.SEVERE, "Error al guardar vuelo", e);
             MessageUtils.showError("Error al guardar vuelo");
         }
     }
@@ -455,7 +454,6 @@ public class FXMLMainViewController {
     public void deleteFlight( ) {
         Flight flight = idVuelosTableView.getSelectionModel().getSelectedItem();
         if (!confirmDeleteFlight(flight)) {
-            logger.info("Eliminación cancelada por el usuario.");
             return;
         }
         try {
@@ -464,9 +462,8 @@ public class FXMLMainViewController {
             idVuelosTableView.getSelectionModel().clearSelection(); // limpiar campos
             FileUtils.saveFlightsToFile(flightsObsList); // guardar lista de vuelos actualizada en el fichero
             idFlightNumberTextField.requestFocus(); //poner el foco en el field flightNumber
-            logger.info("Vuelo eliminado: " + flight);
         } catch (Exception e) {
-            logger.log(Level.SEVERE, "No se pudo eliminar el vuelo: " + flight, e);
+            //logger.log(Level.SEVERE, "No se pudo eliminar el vuelo: " + flight, e);
             MessageUtils.showError("No se pudo eliminar el vuelo.");
         }
     }
@@ -748,10 +745,9 @@ public class FXMLMainViewController {
                 flightsObsList.set(index, updateFlight);
                 try {
                     FileUtils.saveFlightsToFile(flightsObsList);
-                    logger.info("Vuelo actualizado: " + updateFlight);
                     resetToInitialState();
                 }catch (Exception e) {
-                    logger.log(Level.SEVERE, "No se pudo actualizar el vuelo: " + updateFlight, e);
+                    //logger.log(Level.SEVERE, "No se pudo actualizar el vuelo: " + updateFlight, e);
                     MessageUtils.showError("No se pudo actualizar el vuelo.");
                 }
             }
