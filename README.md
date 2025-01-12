@@ -1,6 +1,6 @@
 # FlightFX
 
-**FlightFX** es una aplicación de escritorio creada con **JavaFX** y **Scene Builder** que permite gestionar vuelos de forma eficiente y visualizar estadísticas en gráficos interactivos. Combina una interfaz personalizada con funcionalidades completas y validaciones en tiempo real para garantizar una experiencia fluida.
+**FlightFX** es una aplicación de escritorio creada con **JavaFX** y **Scene Builder** para gestionar vuelos de forma eficiente y visualizar estadísticas en gráficos interactivos. Desarrollada como parte de un proyecto de aprendizaje, combina una interfaz personalizada con funcionalidades completas y validaciones en tiempo real para una experiencia fluida.
 
 ## ✨ Características principales
 
